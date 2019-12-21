@@ -1,0 +1,125 @@
+2019-11-22 22:59:16,334 ERROR: Exception on /user/Martin [GET] [in C:\anaconda\envs\microblog\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\anaconda\envs\microblog\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\anaconda\envs\microblog\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\anaconda\envs\microblog\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\anaconda\envs\microblog\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\anaconda\envs\microblog\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\anaconda\envs\microblog\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\anaconda\envs\microblog\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\Martin\projects\microblog\app\routes.py", line 84, in user
+    return render_template('user.html', user=user, posts=posts)
+  File "C:\anaconda\envs\microblog\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\anaconda\envs\microblog\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\anaconda\envs\microblog\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\anaconda\envs\microblog\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "C:\anaconda\envs\microblog\lib\site-packages\jinja2\loaders.py", line 125, in load
+    code = environment.compile(source, name, filename)
+  File "C:\anaconda\envs\microblog\lib\site-packages\jinja2\environment.py", line 591, in compile
+    self.handle_exception(exc_info, source_hint=source_hint)
+  File "C:\anaconda\envs\microblog\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\anaconda\envs\microblog\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\Martin\projects\microblog\app\templates\user.html", line 17, in template
+    <p><a href="{{ url_for('unfollow'), username=user.username) }}">Unfollow</a></p>
+  File "C:\anaconda\envs\microblog\lib\site-packages\jinja2\environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "C:\anaconda\envs\microblog\lib\site-packages\jinja2\parser.py", line 901, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "C:\anaconda\envs\microblog\lib\site-packages\jinja2\parser.py", line 883, in subparse
+    rv = self.parse_statement()
+  File "C:\anaconda\envs\microblog\lib\site-packages\jinja2\parser.py", line 130, in parse_statement
+    return getattr(self, 'parse_' + self.stream.current.value)()
+  File "C:\anaconda\envs\microblog\lib\site-packages\jinja2\parser.py", line 268, in parse_block
+    node.body = self.parse_statements(('name:endblock',), drop_needle=True)
+  File "C:\anaconda\envs\microblog\lib\site-packages\jinja2\parser.py", line 165, in parse_statements
+    result = self.subparse(end_tokens)
+  File "C:\anaconda\envs\microblog\lib\site-packages\jinja2\parser.py", line 883, in subparse
+    rv = self.parse_statement()
+  File "C:\anaconda\envs\microblog\lib\site-packages\jinja2\parser.py", line 130, in parse_statement
+    return getattr(self, 'parse_' + self.stream.current.value)()
+  File "C:\anaconda\envs\microblog\lib\site-packages\jinja2\parser.py", line 223, in parse_if
+    drop_needle=True)
+  File "C:\anaconda\envs\microblog\lib\site-packages\jinja2\parser.py", line 165, in parse_statements
+    result = self.subparse(end_tokens)
+  File "C:\anaconda\envs\microblog\lib\site-packages\jinja2\parser.py", line 876, in subparse
+    self.stream.expect('variable_end')
+  File "C:\anaconda\envs\microblog\lib\site-packages\jinja2\lexer.py", line 384, in expect
+    self.name, self.filename)
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got '='
+2019-11-22 23:00:42,291 INFO: Microblog startup [in D:\Martin\projects\microblog\app\__init__.py:45]
+2019-11-24 20:35:53,272 INFO: Microblog startup [in D:\Martin\projects\microblog\app\__init__.py:47]
+2019-11-24 20:36:04,402 ERROR: Exception on /user/Eric [GET] [in C:\anaconda\envs\microblog\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\anaconda\envs\microblog\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\anaconda\envs\microblog\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\anaconda\envs\microblog\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\anaconda\envs\microblog\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\anaconda\envs\microblog\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\anaconda\envs\microblog\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\anaconda\envs\microblog\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\Martin\projects\microblog\app\routes.py", line 84, in user
+    return render_template('user.html', user=user, posts=posts)
+  File "C:\anaconda\envs\microblog\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\anaconda\envs\microblog\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\anaconda\envs\microblog\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\anaconda\envs\microblog\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\anaconda\envs\microblog\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\anaconda\envs\microblog\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "D:\Martin\projects\microblog\app\templates\user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\anaconda\envs\microblog\lib\site-packages\jinja2\environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "D:\Martin\projects\microblog\app\templates\user.html", line 14, in root
+    {% elif not current_user.is_following(user) %}
+  File "D:\Martin\projects\microblog\app\templates\base.html", line 14, in root
+    <span class="icon-bar"></span>
+  File "C:\anaconda\envs\microblog\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 10, in root
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  File "C:\anaconda\envs\microblog\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block_doc
+    {% block body -%}
+  File "C:\anaconda\envs\microblog\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 39, in block_html
+  File "C:\anaconda\envs\microblog\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 90, in block_body
+  File "D:\Martin\projects\microblog\app\templates\base.html", line 43, in block_navbar
+    {% endfor %}
+  File "C:\anaconda\envs\microblog\lib\site-packages\jinja2\runtime.py", line 262, in call
+    return __obj(*args, **kwargs)
+  File "C:\anaconda\envs\microblog\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\anaconda\envs\microblog\lib\site-packages\flask\app.py", line 2215, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "C:\anaconda\envs\microblog\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\anaconda\envs\microblog\lib\site-packages\flask\helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "C:\anaconda\envs\microblog\lib\site-packages\werkzeug\routing.py", line 2020, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'explore'. Did you mean 'edit_profile' instead?
+2019-11-24 22:13:21,409 INFO: Microblog startup [in D:\Martin\projects\microblog\app\__init__.py:47]
+2019-11-24 22:21:13,481 INFO: Microblog startup [in D:\Martin\projects\microblog\app\__init__.py:47]
+2019-12-07 17:14:01,316 INFO: Microblog startup [in D:\Martin\projects\microblog\app\__init__.py:47]
